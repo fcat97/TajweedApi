@@ -149,9 +149,9 @@ open class IndoPakTajweedPattern : TajweedPattern {
         this.append(getNuunSakin())
 
         // when idgam appears between two part of a sentence e.g. sura 2:7
-        append('(')
-        append('['); for (c in ignoreCharBetweenIdgamGunnah) append(c); append(']')
-        append(") ?")
+        append("([")
+        for (c in ignoreCharBetweenIdgamGunnah) append(c)
+        append("] )?")
 
         this.append('[')
         for (c in harf_idgam_withGunnah) this.append(c)
